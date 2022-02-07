@@ -1,0 +1,277 @@
+@import "breakpoints";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 10px;
+  
+}
+
+.homeMainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/stage\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    .homeTitleSection{
+        width: 100%;
+        height: 5rem;
+        // background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .titleImgContainer{
+            width: 32%;
+            height: 100%;
+            // background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("../images/title.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            h1{
+                margin-top: -2rem;
+                font-size: 1.5rem;
+                color: white;
+                font-family: 'Molot', sans-serif;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                                                
+            }
+        }
+    }
+    .homeTabSelectionSection{
+        width: 90%;
+        height: 60%;
+        background-color: transparent;
+        margin: auto;
+        margin-top: 1.5rem;
+        .homeTabSelectionTitle{
+            width: 100%;
+            height: 17%;
+            // background-color:aquamarine;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          
+            .homeTabs{
+                width: 16.5%;
+                height: 100%;
+                margin: 0 .5rem;
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p{
+                    width: 60%;
+                    height: 100%;
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Poppins', sans-serif;
+                    position: relative;
+                    color: white;
+                    cursor: pointer;
+                    span{
+                        display: none;
+                        width: 100%;
+                        height: 0.2rem;
+                        border: 2px solid #F21170;
+                        border-radius: .5rem;
+                        position: absolute;
+                        bottom: 3px;
+                    }
+                }
+               
+            }
+            .onClickTab{
+                background-color:white;
+                p{
+                    color: black;
+                    span{
+                        display: block; 
+                    }
+                }
+            }
+        }
+        .homeCardSelectionContainer{
+            width: 100%;
+            height: 83%;
+            background-color: white;
+            border-radius: 1rem;
+            padding: .5rem 2rem;
+            .homeCardContainer{
+                width: 14%;
+                height: 100%;
+                background-color: burlywood;
+                padding-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                
+                .homeCard{
+                    width: 100%;
+                    height: 85%;
+                    background-color: cadetblue;
+                    border-radius: 1rem;
+                    background-image: url("../images/cardFrame\ .png");
+                    background-repeat: no-repeat;
+                    background-size: 100%,100%;
+                    display: flex;
+                    padding: .4rem .7rem .8rem .7rem; 
+                    overflow: hidden;
+                    position: relative;
+
+                    .homeCardContentDiv{
+                        width: 100%;
+                        height: 100%;
+                        background: rgb(255,255,255);
+                        background: linear-gradient(0deg, rgba(255,255,255,1) 43%, rgba(199,171,104,1) 86%);
+                        border-radius: .5rem;
+                        z-index: 1;
+                        &::before{
+                            content:url("../images//depositphotos_77838868-stock-illustration-film-strip\ 1.png");
+                            width: 90%;
+                            height: 35%;
+                            transform: rotate(1deg);
+                            background-color: transparent;   
+                            background-repeat: no-repeat;
+                            background-size: 100%,100%;
+                            margin:1.3rem 0  ;
+                        }
+                      
+                    }
+                    .homeCardSectionContainer{
+                            position: absolute;
+                            border-radius: .5rem;
+                            width: 85%;
+                            height: 92%;
+                            margin: 0; 
+                            z-index: 2;
+                            background-color: transparent;
+                            display: flex;
+                            .homeCardSection1{
+                                width: 30%;
+                                height: 100%;
+                                background-color: transparent;
+                                display: flex;
+                                .cardSection1Name{
+                                    width: 60%;
+                                    height: 100%;
+                                    background-color: transparent;
+                                    writing-mode: vertical-lr;
+                                    padding-bottom: .5rem;
+                                    padding-left:.5rem;
+                                    p{
+                                        transform: rotate(-180deg);
+                                        font-size: 1rem;
+                                    }
+                                }
+                                .cardSection1Genere{
+                                    width: 40%;
+                                    height: 100%;
+                                    background-color: #BE9D4F;
+                                    writing-mode: vertical-lr;
+                                    padding-bottom: .5rem;
+                                    padding-right: .5rem;
+                                    clip-path: polygon(0 67%, 100% 76%, 100% 100%, 0% 100%);
+                                    p{
+                                        font-size: .7rem;
+                                        transform: rotate(-180deg);
+                                        color: white;
+
+                                    }
+
+                                }
+
+                            }
+                            .homeCardSection2{
+                                width: 70%;
+                                height: 100%;
+                                // background-color: aquamarine;
+                                display: flex;
+                                flex-direction: column;
+                                .cardProfileImg{
+                                    width: 100%;
+                                    height: 40%;
+                                    background-color: transparent;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .cardProfileImgContainer{
+                                        position: relative;
+                                        width: 80%;
+                                        height: 85%;
+                                        border-radius: 50%;
+                                        background-color: white;
+                                        // border: 2px solid white;
+                                        img{
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 105%;
+                                            // border: 2px solid white;
+                                            border-radius: 50%;
+
+                                        }
+                                    }
+                                   
+                                }
+                                .cardDetails{
+                                    width: 100%;
+                                    height: 60%;
+                                    background-color: brown;
+                                    .cardLogo{
+                                        width: 100%;
+                                        height: 50%;
+                                        padding-left: 1rem;
+                                        background-image: url("../images/boly.png");
+                                        background-repeat: no-repeat;
+                                        background-size:70px 70px;
+                                        background-position: center;
+                                        box-sizing: border-box;
+                                    }
+                                    .cardPriceDiv{
+                                        width: 100%;
+                                        height: 1.5rem;
+                                        margin: 0.2rem 0;
+                                        border-radius: .2rem;
+                                        background:linear-gradient(156.18deg, #FF5200 17.11%, #FA9905 90.27%); 
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: white;
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                            }
+                    }
+                   
+
+
+                }
+                span{
+                    width: 70%;
+                    height: 0.3rem;
+                    background-color: #F21170;
+                    margin:  auto;
+                    border-radius: .3rem;
+                }
+            }
+        }
+
+    }
+
+}
