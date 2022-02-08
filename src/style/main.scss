@@ -1,277 +1,646 @@
 @import "breakpoints";
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-size: 10px;
-  
+body {
+  font-size: 10px;
 }
 
-.homeMainContainer{
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../images/stage\ 1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    .homeTitleSection{
-        width: 100%;
-        height: 5rem;
-        // background-color: antiquewhite;
+.homeMainContainer {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  overflow-x: auto;
+  background-image: url("../images/stage\ 1.png");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  .homeTitleSection {
+    width: 100%;
+    height: 5rem;
+    // background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    .titleImgContainer {
+      width: 32%;
+      height: 100%;
+      // background-color: aqua;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("../images/title.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      h1 {
+        margin-top: -2rem;
+        font-size: 1.5rem;
+        color: white;
+        font-family: "Molot", sans-serif;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .homeTabSelectionSection {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    margin: auto;
+    margin-top: 7rem;
+    .homeTabSelectionTitle {
+      width: 100%;
+      height: 17%;
+      // background-color:aquamarine;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .homeTabs {
+        width: 16.5%;
+        height: 100%;
+        margin: 0 0.5rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        .titleImgContainer{
-            width: 32%;
-            height: 100%;
-            // background-color: aqua;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url("../images/title.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            h1{
-                margin-top: -2rem;
-                font-size: 1.5rem;
-                color: white;
-                font-family: 'Molot', sans-serif;
-                word-spacing: 1px;
-                letter-spacing: 1px;
-                                                
-            }
-        }
-    }
-    .homeTabSelectionSection{
-        width: 90%;
-        height: 60%;
-        background-color: transparent;
-        margin: auto;
-        margin-top: 1.5rem;
-        .homeTabSelectionTitle{
+        p {
+          width: 60%;
+          height: 100%;
+          font-size: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-family: "Poppins", sans-serif;
+          position: relative;
+          color: white;
+          cursor: pointer;
+          span {
+            display: none;
             width: 100%;
-            height: 17%;
-            // background-color:aquamarine;
-            padding: 0 1rem;
+            height: 0.2rem;
+            border: 2px solid #f21170;
+            border-radius: 0.5rem;
+            position: absolute;
+            bottom: 3px;
+          }
+        }
+      }
+      .onClickTab {
+        background-color: white;
+        p {
+          color: black;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+    .homeCardSelectionContainer {
+      width: 100%;
+      height: 83%;
+      background-color: white;
+      border-radius: 1rem;
+      padding: 0.5rem 2rem;
+      display: flex;
+      .homeCardContainer {
+        width: 14%;
+        height: 100%;
+        // background-color: burlywood;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0.8rem;
+        .homeCard {
+          width: 100%;
+          height: 85%;
+          // background-color: cadetblue;
+          border-radius: 1rem;
+          background-image: url("../images/cardFrame\ .png");
+          background-repeat: no-repeat;
+          background-size: 100%, 100%;
+          display: flex;
+          padding: 0.4rem 0.7rem 0.8rem 0.7rem;
+          overflow: hidden;
+          position: relative;
+
+          .homeCardContentDiv {
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 1) 43%,
+              rgba(199, 171, 104, 1) 86%
+            );
+            border-radius: 0.5rem;
+            z-index: 1;
+            &::before {
+              content: url("../images//depositphotos_77838868-stock-illustration-film-strip\ 1.png");
+              width: 90%;
+              height: 35%;
+              transform: rotate(1deg);
+              background-color: transparent;
+              background-repeat: no-repeat;
+              background-size: 100%, 100%;
+              margin: 1.3rem 0;
+            }
+          }
+          .homeCardSectionContainer {
+            position: absolute;
+            border-radius: 0.5rem;
+            width: 85%;
+            height: 92%;
+            margin: 0;
+            z-index: 2;
+            background-color: transparent;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-          
-            .homeTabs{
-                width: 16.5%;
+            .homeCardSection1 {
+              width: 30%;
+              height: 100%;
+              background-color: transparent;
+              display: flex;
+              .cardSection1Name {
+                width: 60%;
                 height: 100%;
-                margin: 0 .5rem;
-                border-top-left-radius: .5rem;
-                border-top-right-radius: .5rem;
+                background-color: transparent;
+                writing-mode: vertical-lr;
+                padding-bottom: 0.5rem;
+                padding-left: 0.5rem;
+                p {
+                  transform: rotate(-180deg);
+                  font-size: 1rem;
+                }
+              }
+              .cardSection1Genere {
+                width: 40%;
+                height: 100%;
+                background-color: #be9d4f;
+                writing-mode: vertical-lr;
+                padding-bottom: 0.5rem;
+                padding-right: 0.5rem;
+                clip-path: polygon(0 67%, 100% 76%, 100% 100%, 0% 100%);
+                p {
+                  font-size: 0.7rem;
+                  transform: rotate(-180deg);
+                  color: white;
+                }
+              }
+            }
+            .homeCardSection2 {
+              width: 70%;
+              height: 100%;
+              // background-color: aquamarine;
+              display: flex;
+              flex-direction: column;
+              .cardProfileImg {
+                width: 100%;
+                height: 40%;
+                background-color: transparent;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                p{
-                    width: 60%;
+                .cardProfileImgContainer {
+                  position: relative;
+                  width: 80%;
+                  height: 85%;
+                  border-radius: 50%;
+                  background-color: white;
+                  // border: 2px solid white;
+                  img {
+                    position: absolute;
+                    width: 100%;
+                    height: 105%;
+                    // border: 2px solid white;
+                    border-radius: 50%;
+                  }
+                }
+              }
+              .cardDetails {
+                width: 100%;
+                height: 60%;
+                // background-color: brown;
+                .cardLogo {
+                  width: 100%;
+                  height: 50%;
+                  padding-left: 1rem;
+                  background-image: url("../images/boly.png");
+                  background-repeat: no-repeat;
+                  background-size: 70px 70px;
+                  background-position: center;
+                  box-sizing: border-box;
+                }
+                .cardPriceDiv {
+                  width: 100%;
+                  height: 1.5rem;
+                  margin: 0.2rem 0;
+                  border-radius: 0.2rem;
+                  background: linear-gradient(
+                    156.18deg,
+                    #ff5200 17.11%,
+                    #fa9905 90.27%
+                  );
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 400;
+                }
+                .cardRatings {
+                  width: 100%;
+                  height: 1.6rem;
+                  // background-color: antiquewhite;
+                  display: flex;
+                  .cardRatingStar {
+                    width: 50%;
                     height: 100%;
-                    font-size: 1rem;
+                    // background-color: burlywood;
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    font-family: 'Poppins', sans-serif;
-                    position: relative;
-                    color: white;
-                    cursor: pointer;
-                    span{
-                        display: none;
-                        width: 100%;
-                        height: 0.2rem;
-                        border: 2px solid #F21170;
-                        border-radius: .5rem;
-                        position: absolute;
-                        bottom: 3px;
+                    p {
+                      font-size: 1rem;
+                      color: black;
                     }
-                }
-               
-            }
-            .onClickTab{
-                background-color:white;
-                p{
-                    color: black;
-                    span{
-                        display: block; 
-                    }
-                }
-            }
-        }
-        .homeCardSelectionContainer{
-            width: 100%;
-            height: 83%;
-            background-color: white;
-            border-radius: 1rem;
-            padding: .5rem 2rem;
-            .homeCardContainer{
-                width: 14%;
-                height: 100%;
-                background-color: burlywood;
-                padding-top: 1rem;
-                display: flex;
-                flex-direction: column;
-                
-                .homeCard{
-                    width: 100%;
-                    height: 85%;
-                    background-color: cadetblue;
-                    border-radius: 1rem;
-                    background-image: url("../images/cardFrame\ .png");
-                    background-repeat: no-repeat;
-                    background-size: 100%,100%;
+                  }
+                  .cardRatingArt {
+                    width: 50%;
+                    height: 100%;
+                    // background-color: chocolate;
                     display: flex;
-                    padding: .4rem .7rem .8rem .7rem; 
-                    overflow: hidden;
-                    position: relative;
+                    align-items: center;
+                    justify-content: center;
 
-                    .homeCardContentDiv{
-                        width: 100%;
-                        height: 100%;
-                        background: rgb(255,255,255);
-                        background: linear-gradient(0deg, rgba(255,255,255,1) 43%, rgba(199,171,104,1) 86%);
-                        border-radius: .5rem;
-                        z-index: 1;
-                        &::before{
-                            content:url("../images//depositphotos_77838868-stock-illustration-film-strip\ 1.png");
-                            width: 90%;
-                            height: 35%;
-                            transform: rotate(1deg);
-                            background-color: transparent;   
-                            background-repeat: no-repeat;
-                            background-size: 100%,100%;
-                            margin:1.3rem 0  ;
-                        }
-                      
+                    p {
+                      margin-left: 0.2rem;
+                      font-size: 1rem;
+                      color: black;
                     }
-                    .homeCardSectionContainer{
-                            position: absolute;
-                            border-radius: .5rem;
-                            width: 85%;
-                            height: 92%;
-                            margin: 0; 
-                            z-index: 2;
-                            background-color: transparent;
-                            display: flex;
-                            .homeCardSection1{
-                                width: 30%;
-                                height: 100%;
-                                background-color: transparent;
-                                display: flex;
-                                .cardSection1Name{
-                                    width: 60%;
-                                    height: 100%;
-                                    background-color: transparent;
-                                    writing-mode: vertical-lr;
-                                    padding-bottom: .5rem;
-                                    padding-left:.5rem;
-                                    p{
-                                        transform: rotate(-180deg);
-                                        font-size: 1rem;
-                                    }
-                                }
-                                .cardSection1Genere{
-                                    width: 40%;
-                                    height: 100%;
-                                    background-color: #BE9D4F;
-                                    writing-mode: vertical-lr;
-                                    padding-bottom: .5rem;
-                                    padding-right: .5rem;
-                                    clip-path: polygon(0 67%, 100% 76%, 100% 100%, 0% 100%);
-                                    p{
-                                        font-size: .7rem;
-                                        transform: rotate(-180deg);
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-                            .homeCardSection2{
-                                width: 70%;
-                                height: 100%;
-                                // background-color: aquamarine;
-                                display: flex;
-                                flex-direction: column;
-                                .cardProfileImg{
-                                    width: 100%;
-                                    height: 40%;
-                                    background-color: transparent;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    .cardProfileImgContainer{
-                                        position: relative;
-                                        width: 80%;
-                                        height: 85%;
-                                        border-radius: 50%;
-                                        background-color: white;
-                                        // border: 2px solid white;
-                                        img{
-                                            position: absolute;
-                                            width: 100%;
-                                            height: 105%;
-                                            // border: 2px solid white;
-                                            border-radius: 50%;
-
-                                        }
-                                    }
-                                   
-                                }
-                                .cardDetails{
-                                    width: 100%;
-                                    height: 60%;
-                                    background-color: brown;
-                                    .cardLogo{
-                                        width: 100%;
-                                        height: 50%;
-                                        padding-left: 1rem;
-                                        background-image: url("../images/boly.png");
-                                        background-repeat: no-repeat;
-                                        background-size:70px 70px;
-                                        background-position: center;
-                                        box-sizing: border-box;
-                                    }
-                                    .cardPriceDiv{
-                                        width: 100%;
-                                        height: 1.5rem;
-                                        margin: 0.2rem 0;
-                                        border-radius: .2rem;
-                                        background:linear-gradient(156.18deg, #FF5200 17.11%, #FA9905 90.27%); 
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        color: white;
-                                        font-size: 1rem;
-                                        font-weight: 400;
-                                    }
-                                }
-
-                            }
-                    }
-                   
-
-
+                  }
                 }
-                span{
-                    width: 70%;
-                    height: 0.3rem;
-                    background-color: #F21170;
-                    margin:  auto;
-                    border-radius: .3rem;
-                }
+              }
             }
+          }
+        }
+        span {
+          display: none;
+          width: 70%;
+          height: 0.3rem;
+          background-color: #f21170;
+          margin: auto;
+          border-radius: 0.3rem;
+        }
+        .cardSelect {
+          display: block;
+        }
+      }
+    }
+  }
+  .homeHotCards {
+    width: 90%;
+    height: 10rem;
+    // background-color: firebrick;
+    margin: 0 auto;
+
+    .homeHotCardTitle {
+      width: 100%;
+      height: 30%;
+      // background-color: bisque;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      justify-content: space-between;
+      p {
+        font-size: 1rem;
+        color: white;
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .hotCardsContainer {
+      width: 100%;
+      height: 70%;
+      // background-color: cadetblue;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .hotCardDiv {
+        width: 13rem;
+        height: 100%;
+        // background-color: cyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hotCardLike {
+          width: 100%;
+          display: flex;
+          padding-left: 1rem;
+          margin-top: 0.5rem;
+          p {
+            margin-left: 0.5rem;
+            font-size: 1rem;
+            color: white;
+          }
         }
 
+        .HotCard {
+          width: 11rem;
+          height: 3.5rem;
+          background-color: white;
+          margin: 0 0.5rem;
+          border-radius: 0.6rem;
+          display: flex;
+          .hotCardImg {
+            width: 35%;
+            height: 100%;
+            // background-color: darkmagenta;
+            border-radius: 0.6rem;
+            // padding: .5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              position: absolute;
+              width: 90%;
+              height: 90%;
+              border-radius: 0.6rem;
+            }
+          }
+          .hotCardsDetails {
+            width: 65%;
+            height: 100%;
+            // background-color:darkgoldenrod;
+            border-radius: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            p {
+              width: 100%;
+              height: 50%;
+              // background-color: darkgreen;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 0.8rem;
+              color: #f21170;
+              font-family: "Poppins", sans-serif;
+            }
+            span {
+              width: 100%;
+              height: 50%;
+              // background-color: darkgray;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 0.5rem;
+              div {
+                display: flex;
+                p {
+                  width: 1rem;
+                  font-size: 0.7rem;
+                  color: gray;
+                }
+              }
+            }
+          }
+        }
+      }
+      .cardSelectButton {
+        width: 9rem;
+        height: 2.5rem;
+        background-image: url("../images//Rectangle\ 4.png");
+        background-size: 100%, 120%;
+        position: absolute;
+        right: 1rem;
+        margin-top: -1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+        box-sizing: border-box;
+        p {
+          font-size: 1.2rem;
+          color: white;
+          font-family: "Poppins", sans-serif;
+        }
+      }
     }
+  }
+  .homeMoviesCardsContainer {
+    width: 100%;
+    height: 40rem;
+    background-color: transparent;
+    margin-top: 2rem;
+    position: relative;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color:aquamarine;
+      .fa {
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+    .MoviesListContainer {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .mocieCardListDiv {
+        width: 100%;
+        height: 100%;
+        padding-top: 4rem;
+        display: flex;
 
+        .movieListCard {
+          width: 19%;
+          height: 90%;
+          background-color: rgba(255, 255, 255, 0.932);
+          margin: 0 1rem;
+          border-radius: 1rem;
+          display: flex;
+          flex-direction: column;
+          ::-webkit-scrollbar {
+            width: 1rem;
+          }
+          ::-webkit-scrollbar-track {
+            border-radius: 0.9rem;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: gray;
+            border-radius: 10px;
+          }
+
+          .moviesCardTitle {
+            width: 100%;
+            height: 27%;
+            background-color: white;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 4px 18px -6px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 4px 18px -6px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 4px 18px -6px rgba(0, 0, 0, 0.75);
+            .moviesCardStar {
+              width: 100%;
+              height: 2rem;
+              // background-color:tomato ;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+              p {
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: #f21170;
+              }
+            }
+            .moviesCardTitlebalance {
+              width: 100%;
+              height: 1.5rem;
+              // background-color:cornflowerblue ;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              p {
+                font-size: 0.8rem;
+                color: gray;
+              }
+            }
+            .moviesCardPrice {
+              width: 100%;
+              height: 2rem;
+              // background-color:crimson ;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+              p {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #f21170;
+              }
+            }
+          }
+          .moviesCardListContainer {
+            width: 100%;
+            height: 73%;
+            background-color: #f3f3f3;
+            position: relative;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            overflow: auto;
+            box-shadow: -1px -182px 37px -1px rgba(223, 230, 233, 0.53) inset;
+            -webkit-box-shadow: -1px -182px 37px -1px rgba(223, 230, 233, 0.53)
+              inset;
+            -moz-box-shadow: -1px -182px 37px -1px rgba(223, 230, 233, 0.53)
+              inset;
+            .movieSubCards {
+              width: 90%;
+              height: 4rem;
+              background-color: white;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              margin: 1rem auto;
+              border-radius: 1rem;
+              // border: 1px solid gray;
+              .MovieCardProfile {
+                width: 35%;
+                height: 100%;
+                background-color: white;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                  width: 90%;
+                  height: 90%;
+                  border-radius: 1rem;
+                }
+              }
+              .MovieCardContents {
+                width: 65%;
+                height: 100%;
+                // background-color: aquamarine;
+                position: relative;
+                .movieCardName {
+                  width: 100%;
+                  height: 50%;
+                  // background-color: coral;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  p {
+                    font-size: 1rem;
+                    color: #f21170;
+                  }
+                }
+                .movieCardRtings {
+                  position: absolute;
+                  width: 100%;
+                  height: 50%;
+                  // background-color: brown;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 0 1rem;
+                  .movieCardRatingContent {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p {
+                      font-size: 0.9rem;
+                      color: gray;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .moveUp {
+        .fa-chevron-up {
+          font-size: 1.5rem;
+          color: white;
+        }
+      }
+      .moiveCardContainerBgcc {
+        width: 100%;
+        height: 5rem;
+        background-image: url("../images/Ellipse\ 7.png");
+        background-repeat: repeat-x;
+      }
+    }
+  }
 }
